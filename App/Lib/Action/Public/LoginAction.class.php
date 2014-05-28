@@ -35,8 +35,16 @@ class LoginAction extends Action{
 			session('uname',$user['uname']);
 			session('realname',$this->getRealName($user['uid']));
 			$this->writeToLogin();
+
+			// 根据用户类别跳转至不同的页面
+			$utype = $user['utype'];
+			switch($utype){
+				case 0:
+					$jumpurl = U('/Manage/Index');
+					break;
+			}
 			header('Content-Type:text/html;charset=UTF-8');
-			redirect(U('/Index'),3,'用户登录成功，马上进行后台界面...');
+			redirect($jumpurl,3,'用户登录成功，马上进行后台界面...');
 		}
 	}
 
@@ -123,5 +131,15 @@ class LoginAction extends Action{
 		$rs = $user->where($where)->field($fieldname)->select();
 		return $rs[$fieldname];
 	}
+
+	/**
+		 * 注销登录
+		 * @return [type] [description]
+		 */
+		public function logout(){
+			session_unset();
+			session_destroy();
+			$this->redirect('Login/index');
+		}
 }
 ?>

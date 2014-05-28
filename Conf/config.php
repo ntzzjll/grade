@@ -13,6 +13,10 @@ return array(
 	'LOG_RECORD' => true,
 	'LOG_LEVEL' => 'EMERG,ALERT,CRIT,ERR',
 
+	// APP分组
+	'APP_GROUP_LIST' => 'Index,Manage,Teacher,Student',
+	'DEFAULT_GROUP' => 'Index',
+
 	//网站信息配置参数
 	'WEB_TITLE' => '.::南通中专学生成绩管理系统 V1.0::.',
 	'WEB_EMAIL' => 'ntzzjll@126.com',

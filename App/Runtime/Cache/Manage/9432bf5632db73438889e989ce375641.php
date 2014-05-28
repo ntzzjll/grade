@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -7,7 +7,7 @@
     <link href="__PUBLIC__/Css/common.css" type="text/css" rel="stylesheet" />
     <script src="__PUBLIC__/Js/jquery.js" type="text/javascript" language="javascript"></script>
     <script src="__PUBLIC__/Js/admin.js" type="text/javascript" language="javascript"></script>
-    <title>{:C('WEB_TITLE')}-后台管理</title>
+    <title><?php echo C('WEB_TITLE');?>-后台管理</title>
     <script language="javascript">
     var CONTROL = '__APP__';
     </script>
@@ -36,8 +36,8 @@
                     <span class="location">基本设置 > <span class="locations">欢迎页面</span></span>
                 </div>
                 <span class="adminright">
-                    当前登录者:<span class="adminrights" title="可编辑资料">{$Think.session.realname}</span>
-                    &nbsp;<a href="{:U('logout')}" title="退出" class="adminrightslogout">退出</a>
+                    当前登录者:<span class="adminrights" title="可编辑资料"><?php echo (session('realname')); ?></span>
+                    &nbsp;<a href="<?php echo U('/Login/logout');?>" title="退出" class="adminrightslogout">退出</a>
                 </span>
             </div>            
         </div>  
@@ -69,7 +69,7 @@
                 </ul>
             </div>
             <div id="right-content">
-                <iframe class='ifcontent' name='ifcontent' src='{:U('welcome')}'></iframe>
+                <iframe class='ifcontent' name='ifcontent' src='<?php echo U('welcome');?>'></iframe>
             </div>
         </div>      
     </div>

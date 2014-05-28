@@ -33,7 +33,7 @@ $(function() {
         $("ul[nav=" + need + "]" + " li").removeClass("hover");
         $("ul[nav=" + need + "]" + " li:first").addClass('hover');
 
-        $('iframe[name=ifcontent]').attr('src', CONTROL + '/' + need);
+        $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + need);
 
 
     });
@@ -43,11 +43,13 @@ $(function() {
         var nav = $(this).parent().attr('nav');
         var subnav = $(this).attr('subnav');
         var url = nav + "/" + subnav;
+
         // 改变子栏目选中状态
         $(this).parent().find('li').removeClass('hover');
         $(this).addClass('hover');
         // 控制子栏目跳转菜单
-        $('iframe[name=ifcontent]').attr('src', CONTROL + '/' + url);
+        var jj = CONTROL + '/Manage/' + url;
+        $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + url);
 
 
     });

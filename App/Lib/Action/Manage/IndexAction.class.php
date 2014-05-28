@@ -23,14 +23,6 @@
 		public function setting(){
 			$this->display();
 		}
-		/**
-		 * 注销登录
-		 * @return [type] [description]
-		 */
-		public function logout(){
-			session_unset();
-			session_destroy();
-			$this->redirect('Login/index');
-		}
+		
 	}
 ?>
