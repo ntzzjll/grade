@@ -22,11 +22,13 @@
 				<td><?php echo ($v["cmaster"]); ?></td>
 				<td><?php echo ($v["cmasterphone"]); ?></td>
 				<td><?php echo ($v["dname"]); ?></td>
-				<td class="center"><a href="<?php echo U('edit',array('did'=>$v['did']));?>">编辑</a>&nbsp;/&nbsp;<a href="<?php echo U('doDel',array('did'=>$v['did']));?>" onclick="return confirm('你确定要删除此条记录吗?');">删除</a></td>
+				<td class="center"><a href="<?php echo U('edit',array('did'=>$v['did']));?>">编辑</a>&nbsp;/&nbsp;<a href="<?php echo U('doDel',array('cid'=>$v['cid']));?>" onclick="return confirm('你确定要删除此条记录吗?');">删除</a></td>
 			</tr><?php endforeach; endif; ?>		
-		<tr class="footer">
-			<td colspan="3"><button type="submit" class="btn btn-primary">更新顺序</button></td>
-		</tr>
+		<!-- <tr class="footer">
+			<td colspan="6">
+				
+			</td>
+		</tr> -->
 	</table>
 </body>
 </html>

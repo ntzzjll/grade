@@ -1,5 +1,9 @@
 <?php
 	class ClassAction extends CommonAction{
+		/**
+		 * 显示班级列表页
+		 * @return [type] [description]
+		 */
 		public function index(){
 			$class = D('ClassView')->order('ccode')->select();
 			if($class){
@@ -52,5 +56,18 @@
 				$this->error($class->getError());
 			}
 		}
+
+		public function doDel(){
+			if(!$this->isGet()) halt('页面不存在!');
+
+			$cid = I('cid');
+			if($cid){
+				if(M('class')->where(array('cid'=>$cid))->delete()){
+					$this->success('班级删除成功!',U('index'));
+				}else{
+					$this->error('班级删除失败!',U('index'));
+				}
+			}	    		
+    	}
 	}
 ?>

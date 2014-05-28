@@ -23,12 +23,14 @@
 				<td>{$v.cmaster}</td>
 				<td>{$v.cmasterphone}</td>
 				<td>{$v.dname}</td>
-				<td class="center"><a href="{:U('edit',array('did'=>$v['did']))}">编辑</a>&nbsp;/&nbsp;<a href="{:U('doDel',array('did'=>$v['did']))}" onclick="return confirm('你确定要删除此条记录吗?');">删除</a></td>
+				<td class="center"><a href="{:U('edit',array('did'=>$v['did']))}">编辑</a>&nbsp;/&nbsp;<a href="{:U('doDel',array('cid'=>$v['cid']))}" onclick="return confirm('你确定要删除此条记录吗?');">删除</a></td>
 			</tr>
 		</foreach>		
-		<tr class="footer">
-			<td colspan="3"><button type="submit" class="btn btn-primary">更新顺序</button></td>
-		</tr>
+		<!-- <tr class="footer">
+			<td colspan="6">
+				
+			</td>
+		</tr> -->
 	</table>
 </body>
 </html>
