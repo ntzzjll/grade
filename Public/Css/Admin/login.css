@@ -1,0 +1,30 @@
+/**
+ * 后台登录页面样式表
+ */
+#login-part{
+    position:relative;
+    width:1024px;
+    height:632px;
+    margin:0 auto;
+    background:url(../../Images/admin_login.png) no-repeat;
+}
+
+#login-form{
+    position:absolute;
+    top:302px;
+    left:376px;
+    width:437px;
+    height:142px;
+    padding-top:14px;
+    padding-left:16px;
+}
+
+#btnlogin{
+    display:block;
+    position:absolute;
+    top:36px;
+    left:350px;
+    width:72px;
+    height:69px;
+    background:url(../../Images/btnlogin.png);
+}

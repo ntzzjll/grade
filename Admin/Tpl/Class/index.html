@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link href='__PUBLIC__/Css/bootstrap.css' rel="stylesheet" />
+	<link href='__PUBLIC__/Css/common.css' rel="stylesheet" />
+	<title>Document</title>
+</head>
+<body>
+	<table style="width:800px;margin-top:20px;margin-left:20px;">		
+		<tr class="header">
+			<td>班级编号</td>
+			<td>班级名称</td>
+			<td>班主任</td>
+			<td>班主任电话</td>
+			<td>所属部门</td>
+			<td>操作</td>
+		</tr>		
+		<foreach name="class" item="v">
+			<tr>
+				<td>{$v.ccode}</td>
+				<td>{$v.cname}</td>
+				<td>{$v.cmaster}</td>
+				<td>{$v.cmasterphone}</td>
+				<td>{$v.dname}</td>
+				<td class="center"><a href="{:U('edit',array('did'=>$v['did']))}">编辑</a>&nbsp;/&nbsp;<a href="{:U('doDel',array('did'=>$v['did']))}" onclick="return confirm('你确定要删除此条记录吗?');">删除</a></td>
+			</tr>
+		</foreach>		
+		<tr class="footer">
+			<td colspan="3"><button type="submit" class="btn btn-primary">更新顺序</button></td>
+		</tr>
+	</table>
+</body>
+</html>

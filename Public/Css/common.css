@@ -1,0 +1,64 @@
+body{
+	background:#F4FCFF;
+}
+
+*{
+	color:#666;
+}
+
+ul{
+    padding:0px;
+    margin:0px;
+    list-style:none;
+}
+
+.hidden{
+    display:none;
+}
+
+.center{
+	text-align:center;
+}
+
+.btn-primary{
+	background-color: #58BFE8;
+    border-color: #58BFE8;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary{
+    background-color: #40A6CE;
+    border-color: #40A6CE;
+    color: #FFFFFF;
+}
+
+/*表格样式*/
+table{
+	border:1px solid #CBE9F3;
+	border-top:2px solid #CBE9F3;
+	border-bottom:2px solid #CBE9F3;
+	background-color:#fff;
+}
+
+table td{
+	border:1px solid #CBE9F3;
+	height:40px;
+	padding:4px 10px;
+}
+td.header{
+	height:30px;line-height:30px;text-align:center;font-weight:bold;
+}
+
+tr.header{
+	font-weight:bold;text-align:center;background-color:#EAF8FD;
+}
+
+tr.header td{
+	height:30px;
+}
+
+tr.footer td{
+	height:50px;
+	text-align: center;
+}
+

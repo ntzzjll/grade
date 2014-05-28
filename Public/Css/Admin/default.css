@@ -1,0 +1,59 @@
+/**
+ * 欢迎页面样式
+ */
+#welcome{
+    width:99%; 
+    margin:0 auto; 
+    margin-top:10px;  
+    color:#666;
+}
+
+#welcome h1{
+    font-size:12px;
+    font-weight: bold;
+    color:#006699;
+    display:inline-block;
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    background-color:#eee;
+    border-bottom:2px solid #ddd;
+    text-indent: 1em;
+}
+
+#welcome ul li{
+    height:28px;
+    line-height:28px;
+}
+
+#welcome ul li span.title{
+    display:inline-block;
+    width:120px;
+    text-align:left;
+    margin-right:20px;
+    text-indent: 1em;
+}
+
+#welcome p{
+    line-height:24px;
+    text-indent: 2em;
+    margin-top:10px;
+}
+
+/**
+ * 资料修改页面样式
+ */
+#adminModify{
+    margin-top:20px;
+    color:#666;
+}
+
+#adminModify .form-group{
+    height:32px;
+    line-height: 32px;
+}
+
+#adminModify label{
+    text-align:right;
+    font-weight:normal;
+}
