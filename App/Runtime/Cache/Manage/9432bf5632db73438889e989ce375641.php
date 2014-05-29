@@ -23,7 +23,7 @@
                         <li need="Setting"><a href="#"><span>系统设置</span></a></li>
                         <li need="Department"><a href="#"><span>部门管理</span></a></li>
                         <li need="Class"><a href="#"><span>班级管理</span></a></li>
-                        <li need="score"><a href="#"><span>学期管理</span></a></li>
+                        <li need="Term"><a href="#"><span>学期管理</span></a></li>
                         <li need="score"><a href="#"><span>课程管理</span></a></li>
                         <li need="score"><a href="#"><span>教师管理</span></a></li>
                         <li need="score"><a href="#"><span>学生管理</span></a></li>
@@ -62,6 +62,10 @@
                 <ul nav="Class" class="hidden">
                     <li subnav="index" class="hover">班级列表</li>
                     <li subnav="add">班级添加</li>
+                </ul>
+                <ul nav="Term" class="hidden">
+                    <li subnav="index" class="hover">学期列表</li>
+                    <li subnav="add">学期添加</li>
                 </ul>
                 <ul class="score hidden">
                     <li class="hover">导入成绩</li>

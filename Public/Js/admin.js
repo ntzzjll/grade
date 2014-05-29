@@ -53,4 +53,8 @@ $(function() {
 
 
     });
+
+    $("input[name=txtStart],input[name=txtEnd]").focus(function() {
+        $(this).datetimepicker();
+    });
 });
