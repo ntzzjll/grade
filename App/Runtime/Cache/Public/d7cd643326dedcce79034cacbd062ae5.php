@@ -47,6 +47,7 @@
                     </div>                  
                 </div>
                 <a href="#" id="btnlogin"><!-- 登录 --></a>
+                <span name="reg" id="reg"><a href="#">我要注册</a></span>
             </form>
         </div>
     </div>

@@ -20,6 +20,7 @@ $(function() {
     //重置窗口
     resizeWindow();
 
+    // 主菜单栏选项卡切换效果
     $(".navigation ul li").click(function() {
         //切换顶部选项卡
         $(".navigation ul li").removeClass('navigationtop');
@@ -32,12 +33,11 @@ $(function() {
         $("ul[nav=" + need + "]").removeClass("hidden").css("display", "block");
         $("ul[nav=" + need + "]" + " li").removeClass("hover");
         $("ul[nav=" + need + "]" + " li:first").addClass('hover');
-
+        // 中间iframe窗口内容切换
         $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + need);
-
-
     });
 
+    // 左侧子栏目选项卡效果切换
     $("#left-content ul li").click(function() {
         // 获取子栏目导航路径
         var nav = $(this).parent().attr('nav');
@@ -50,11 +50,11 @@ $(function() {
         // 控制子栏目跳转菜单
         var jj = CONTROL + '/Manage/' + url;
         $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + url);
-
-
     });
 
+    // 选择日期控件
     $("input[name=txtStart],input[name=txtEnd]").focus(function() {
         $(this).datetimepicker();
     });
+
 });

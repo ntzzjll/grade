@@ -62,3 +62,9 @@ tr.footer td{
 	text-align: center;
 }
 
+/*span样式*/
+span.notice{
+	color:#f00;
+	font-style: italic;
+}
+

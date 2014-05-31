@@ -17,6 +17,11 @@ return array(
 
 	'URL_MODEL' => 2,
 
+	//网站信息配置参数
+	'WEB_TITLE' => '.::南通中专学生成绩管理系统 V1.0::.',
+	'WEB_EMAIL' => 'ntzzjll@126.com',
+	'DATA_KEEP' => 'data_keep'
+
 
 	
 );

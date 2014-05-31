@@ -26,7 +26,7 @@
                         <li need="Term"><a href="#"><span>学期管理</span></a></li>
                         <li need="score"><a href="#"><span>课程管理</span></a></li>
                         <li need="score"><a href="#"><span>教师管理</span></a></li>
-                        <li need="score"><a href="#"><span>学生管理</span></a></li>
+                        <li need="Student"><a href="#"><span>学生管理</span></a></li>
                     </ul>
                 </div> 
             </div>
@@ -65,11 +65,17 @@
                 </ul>
                 <ul nav="Term" class="hidden">
                     <li subnav="index" class="hover">学期列表</li>
-                    <li subnav="add">学期添加</li>
+                    <li subnav="add">学期添加
+                    </li>
                 </ul>
                 <ul class="score hidden">
                     <li class="hover">导入成绩</li>
                     <li>成绩列表</li>
+                </ul>
+                <ul nav="Student" class="hidden">
+                    <li subnav="index" class="hover">学生列表</li>
+                    <li subnav='add'>学生添加</li>
+                    <li subnav="import">批量导入</li>
                 </ul>
             </div>
             <div id="right-content">
