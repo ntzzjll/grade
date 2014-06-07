@@ -10,12 +10,13 @@
     <title><?php echo C('WEB_TITLE');?>-后台管理</title>
     <script language="javascript">
     var CONTROL = '__APP__';
+    var GROUPNAME = 'Manage';
     </script>
 </head>
 <body>
     <div class="main-content">
         <div id="header-part">
-            <div id="logo"></div>
+            <div id="logo"><span>成绩管理系统</span></div>
             <div id="header">                
                 <div class="navigation">
                     <ul>
@@ -33,7 +34,7 @@
             <div class="topcontent">
                 <div class="topcontents">
                     <span class="current">您的位置:</span>
-                    <span class="location">基本设置 > <span class="locations">欢迎页面</span></span>
+                    <span class="location" name="location">管理员>后台首页</span>
                 </div>
                 <span class="adminright">
                     当前登录者:<span class="adminrights" title="可编辑资料"><?php echo (session('realname')); ?></span>

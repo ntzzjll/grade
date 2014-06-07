@@ -31,9 +31,11 @@ class LoginAction extends Action{
 			$this->error('用户名或密码输入错误!');
 		}else{
 			// 登录成功
+			$utype = $user['utype'];
 			session('uid',$user['uid']);
 			session('uname',$user['uname']);
-			session('realname',$this->getRealName($user['uid']));
+			session('realname',$this->getRealName($user['uid'],$utype));
+
 			$this->writeToLogin();
 
 			// 根据用户类别跳转至不同的页面
@@ -41,6 +43,9 @@ class LoginAction extends Action{
 			switch($utype){
 				case 0:
 					$jumpurl = U('/Manage/Index');
+					break;
+				case 1:
+					$jumpurl = U('/Teacher/Index');
 					break;
 			}
 			header('Content-Type:text/html;charset=UTF-8');
@@ -120,16 +125,16 @@ class LoginAction extends Action{
 				return $realname;
 			case 1:
 				$user = M('teacher');
-				$fieldname = 'trealname';
+				$where = array('uid' => $uid);
+				$rs = $user->where($where)->field('trealname')->find();
+				return $rs['trealname'];
 				break;
 			case 2:
 				$user = M('student');
-				$fieldname = 'srealname';
+				$where = array('uid' => $uid);
+				$rs = $user->where($where)->field('srealname')->find();
+				return $rs['srealname'];
 		}
-
-		$where = array('uid' => $uid);
-		$rs = $user->where($where)->field($fieldname)->select();
-		return $rs[$fieldname];
 	}
 
 	/**

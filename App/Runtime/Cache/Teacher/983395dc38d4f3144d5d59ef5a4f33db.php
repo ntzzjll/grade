@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
@@ -7,10 +7,10 @@
     <link href="__PUBLIC__/Css/common.css" type="text/css" rel="stylesheet" />
     <script src="__PUBLIC__/Js/jquery.js" type="text/javascript" language="javascript"></script>
     <script src="__PUBLIC__/Js/admin.js" type="text/javascript" language="javascript"></script>
-    <title>{:C('WEB_TITLE')}-后台管理</title>
+    <title><?php echo C('WEB_TITLE');?>-后台管理</title>
     <script language="javascript">
     var CONTROL = '__APP__';
-    var GROUPNAME = 'Manage';
+    var GROUPNAME = 'Teacher';
     </script>
 </head>
 <body>
@@ -20,14 +20,9 @@
             <div id="header">                
                 <div class="navigation">
                     <ul>
-                        <li class="navigationtop" need="default"><a href="#"><span>控制面板</span></a></li>
-                        <li need="Setting"><a href="#"><span>系统设置</span></a></li>
-                        <li need="Department"><a href="#"><span>部门管理</span></a></li>
-                        <li need="Class"><a href="#"><span>班级管理</span></a></li>
-                        <li need="Term"><a href="#"><span>学期管理</span></a></li>
-                        <li need="score"><a href="#"><span>课程管理</span></a></li>
-                        <li need="score"><a href="#"><span>教师管理</span></a></li>
-                        <li need="Student"><a href="#"><span>学生管理</span></a></li>
+                        <li class="Personal" need="default"><a href="#"><span>个人资料</span></a></li>
+                        <li need="Grade"><a href="#"><span>成绩管理</span></a></li>
+                        <li need="Quality"><a href="#"><span>质量分析</span></a></li>
                     </ul>
                 </div> 
             </div>
@@ -37,8 +32,8 @@
                     <span class="location" name="location">管理员>后台首页</span>
                 </div>
                 <span class="adminright">
-                    当前登录者:<span class="adminrights" title="可编辑资料">{$Think.session.realname}</span>
-                    &nbsp;<a href="{:U('/Login/logout')}" title="退出" class="adminrightslogout">退出</a>
+                    当前登录者:<span class="adminrights" title="可编辑资料"><?php echo (session('realname')); ?>老师</span>
+                    &nbsp;<a href="<?php echo U('/Login/logout');?>" title="退出" class="adminrightslogout">退出</a>
                 </span>
             </div>            
         </div>  
@@ -56,9 +51,10 @@
                     <li subnav="data"><a href="#">数据维护</a></li>
                     <li subnav="visit"><a href="#">历史访问</a></li>                    
                 </ul>
-                <ul nav="Department" class="hidden">
-                    <li subnav="index" class="hover">部门列表</li>
-                    <li subnav="add">部门添加</li>
+                <ul nav="Grade" class="hidden">
+                    <li subnav="index" class="hover">成绩列表</li>
+                    <li subnav="add">添加成绩</li>
+                    <li subnav="search">检索成绩</li>
                 </ul>
                 <ul nav="Class" class="hidden">
                     <li subnav="index" class="hover">班级列表</li>
@@ -80,7 +76,7 @@
                 </ul>
             </div>
             <div id="right-content">
-                <iframe class='ifcontent' name='ifcontent' src='{:U('welcome')}'></iframe>
+                <iframe class='ifcontent' name='ifcontent' src='<?php echo U('welcome');?>'></iframe>
             </div>
         </div>      
     </div>

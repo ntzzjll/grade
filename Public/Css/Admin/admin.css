@@ -55,6 +55,17 @@
     background:url(../../Images/bg_position.gif) no-repeat 0 0;
 }
 
+#header-part #logo span{
+    display:block;
+    position:absolute;
+    top:20px;
+    left:10px;
+    font-size:24px;
+    color:#4B8196;
+    font-family: "微软雅黑","黑体";
+    font-weight:bold;
+}
+
 .navigation{
     position:absolute;
     left:200px;

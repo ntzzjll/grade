@@ -19,6 +19,7 @@ $(window).resize(function() {
 $(function() {
     //重置窗口
     resizeWindow();
+    var level1, level2;
 
     // 主菜单栏选项卡切换效果
     $(".navigation ul li").click(function() {
@@ -33,8 +34,13 @@ $(function() {
         $("ul[nav=" + need + "]").removeClass("hidden").css("display", "block");
         $("ul[nav=" + need + "]" + " li").removeClass("hover");
         $("ul[nav=" + need + "]" + " li:first").addClass('hover');
+
+        // 更改当前位置
+        level1 = $(this).find('span').html();
+        $("span[name=location]").html(level1);
+        var jj = CONTROL + '/' + GROUPNAME + '/' + need;
         // 中间iframe窗口内容切换
-        $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + need);
+        $('iframe[name=ifcontent]').attr('src', jj);
     });
 
     // 左侧子栏目选项卡效果切换
@@ -47,9 +53,14 @@ $(function() {
         // 改变子栏目选中状态
         $(this).parent().find('li').removeClass('hover');
         $(this).addClass('hover');
+
+        // 更改当前位置
+        level2 = $(this).html();
+        $("span[name=location]").html(level1 + '>' + level2);
+
         // 控制子栏目跳转菜单
-        var jj = CONTROL + '/Manage/' + url;
-        $('iframe[name=ifcontent]').attr('src', CONTROL + '/Manage/' + url);
+        var jj = CONTROL + '/' + GROUPNAME + '/' + url;
+        $('iframe[name=ifcontent]').attr('src', jj);
     });
 
     // 选择日期控件
